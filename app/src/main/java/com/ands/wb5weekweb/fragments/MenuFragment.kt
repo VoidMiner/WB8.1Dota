@@ -5,9 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation
 import com.ands.wb5weekweb.R
 import com.ands.wb5weekweb.databinding.FragmentMenuBinding
+import com.ands.wb5weekweb.fragments.heroes.DotaHeroesFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -25,23 +25,20 @@ class MenuFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.openDotaList.setOnClickListener() {
-            Navigation.findNavController(binding.root)
-                .navigate(R.id.action_menuFragment_to_heroesFragment)
+        binding.openDotaList.setOnClickListener {
+            requireActivity().supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.fragmentContainerView,DotaHeroesFragment())
+                .addToBackStack(null)
+                .commit()
         }
 
-        binding.openSuperHeroList.setOnClickListener() {
-            Navigation.findNavController(binding.root)
-                .navigate(R.id.action_menuFragment_to_superHeroesFragment)
-        }
-
-        binding.openTinder.setOnClickListener() {
-            Navigation.findNavController(binding.root)
-                .navigate(R.id.action_menuFragment_to_tinderFragment)
-        }
         binding.aboutBtn.setOnClickListener {
-            Navigation.findNavController(binding.root)
-                .navigate(R.id.action_menuFragment_to_aboutFragment)
+            requireActivity().supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.fragmentContainerView,AboutFragment())
+                .addToBackStack(null)
+                .commit()
         }
     }
 

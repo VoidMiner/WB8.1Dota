@@ -5,7 +5,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.ands.wb5weekweb.model.heroes.DotaHeroesResponse
-import com.ands.wb5weekweb.repository.Repository
 import com.ands.wb5weekweb.usecases.CacheDotaHeroesUseCase
 import com.ands.wb5weekweb.utils.Constants
 import com.squareup.moshi.JsonAdapter

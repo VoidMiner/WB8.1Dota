@@ -62,7 +62,7 @@ class DotaHeroesAdapter :
 
     override fun onBindViewHolder(holder: HeroesViewHolder, position: Int) {
         holder.bind(getItem(position))
-        holder.itemView.setOnClickListener() {
+        holder.itemView.setOnClickListener {
             OnClickListener?.invoke(getItem(position))
         }
     }

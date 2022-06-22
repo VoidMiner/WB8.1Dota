@@ -2,7 +2,6 @@ package com.ands.wb5weekweb.repository
 
 import android.util.Log
 import com.ands.wb5weekweb.model.heroes.DotaHeroesResponse
-import com.ands.wb5weekweb.model.heroes.SuperHeroesResponse
 import java.io.*
 
 

@@ -1,7 +1,6 @@
 package com.ands.wb5weekweb.di
 
 import android.app.Application
-import com.ands.wb5weekweb.utils.TinderDataBase
 import com.facebook.drawee.backends.pipeline.Fresco
 import com.github.terrakok.cicerone.Cicerone
 import dagger.hilt.android.HiltAndroidApp
